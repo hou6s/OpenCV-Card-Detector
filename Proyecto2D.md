@@ -7,12 +7,11 @@
 **─**
 
 
-VISIÓN POR COMPUTADOR EN LA INDUSTRIA\
-MUAII\
+VISIÓN POR COMPUTADOR EN LA INDUSTRIA \
+MUAII \
 
-UPV\
+UPV \
 
-11![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.002.png)
 
 Visión general
 
@@ -34,11 +33,11 @@ El objetivo principal de este proyecto es tomar diferentes imágenes de cartas d
 
 <a name="_page2_x72.00_y110.25"></a>**Análisisdelalgoritmoempleado.**
 
-1. Obtencióndelasimágenesydeteccióndeloscontornosdelascartas.
+1. Obtenciónde las imágenes y detección de los contornos de las cartas.
 
    <a name="_page2_x72.00_y162.00"></a><a name="_page2_x72.00_y197.25"></a>Explicación:
 
-Para empezar debemos encontrar los contornos de las cartas, para ello, se ![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.003.png)procedio a leer las imagenes y aplicar un threshold que nos devolvió una imagen binaria de la original donde el tapete se volvia 0 (negro) y las cartas 1(blanco).
+Para empezar debemos encontrar los contornos de las cartas, para ello, se procedio a leer las imagenes y aplicar un threshold que nos devolvió una imagen binaria de la original donde el tapete se volvia 0 (negro) y las cartas 1(blanco).
 
 En esta imagen binaria podremos usar el método de cv2.findContours para para encontrar todos los contornos de la imagen.
 
@@ -46,9 +45,13 @@ Por último filtraremos los contornos en función de su área para descartar los
 
 Estos contornos serán anexados a una lista con todos los contornos de cartas en la imagen.
 
-2. Deteccióndepaloynúmeroencadacarta.
+![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.003.png)
 
-<a name="_page3_x72.00_y88.50"></a><a name="_page3_x72.00_y123.75"></a>Explicación:![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.004.png)
+2. Detección de palo y número en cada carta.
+
+<a name="_page3_x72.00_y88.50"></a><a name="_page3_x72.00_y123.75"></a>Explicación:
+
+![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.004.png)
 
 Para cada contorno se procede a averiguar cual es el rectángulo de menor área que puede contener ese contorno con cv2.minAreaRect() donde obtendremos los puntos de ese rectángulo.
 
@@ -62,7 +65,7 @@ Queremos que todas las imágenes sean iguales para que al comparar con nuestras 
 
 Ahora para incrementar la robustez del algoritmo giraremos la carta 180 grados ya que los números son simétricos en ambas esquinas y compararemos nuestra máscara solo en la esquina superior izquierda de la carta. Esto se hace para hacer el algoritmo más rápido que si se compara la plantilla con toda la carta.
 
-![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.005.png)
+![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.005.png) 
 
 *Imágenes usadas como plantillas del número.*
 
@@ -76,14 +79,15 @@ Por último procedemos a indicar en la imagen original el palo y número detecta
 
 La cámara tiene distorsiones radiales que hará que las cosas parezcan más pequeñas a medida que se alejan de su centro de imagen. eso hará que las cartas no parezcan rectángulos perfectos y por tanto un rectángulo comprenderá un poco más que el perímetro de la carta detectado. Se puede apreciar que al rotar la carta 180 grados las comparaciones con nuestra plantilla darán mejores resultados. Una solucion mas facil seria calibrar intrínsecamente la cámara pero carecemos de datos para ello.
 
-3. Análisisderesultados(Test\_2)
+3. Análisis de resultados(Test\_2)
 
 ![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.007.jpeg)
 
-<a name="_page5_x72.00_y110.25"></a>**Imagen 13 de Test\_2![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.008.png)**
-
 ![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.009.jpeg)
 
-**Imagen 2 de Test\_2**
+<a name="_page5_x72.00_y110.25"></a>**Imagen 13 de Test\_2
+
+![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.008.png)**
+
 
 Se consiguieron 102 aciertos de 104 cartas lo cual da una **precisión de 0.981.** La única imagen en la que hubo fallos fue la dos en la que cabe resaltar que las cartas estaban bastante difuminadas.
