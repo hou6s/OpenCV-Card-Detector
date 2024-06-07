@@ -1,4 +1,4 @@
-﻿![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.001.jpeg)
+﻿![](images/Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.001.jpeg)
 
 # Detecciónde cartas con OpenCV
 
@@ -42,7 +42,7 @@ Por último filtraremos los contornos en función de su área para descartar los
 
 Estos contornos serán anexados a una lista con todos los contornos de cartas en la imagen.
 
-![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.003.png)
+![](images/Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.003.png)
 
 ### 2. Detección de palo y número en cada carta.
 
@@ -60,7 +60,7 @@ Queremos que todas las imágenes sean iguales para que al comparar con nuestras 
 
 Ahora para incrementar la robustez del algoritmo giraremos la carta 180 grados ya que los números son simétricos en ambas esquinas y compararemos nuestra máscara solo en la esquina superior izquierda de la carta. Esto se hace para hacer el algoritmo más rápido que si se compara la plantilla con toda la carta.
 
-![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.005.png) 
+![](images/Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.005.png) 
 
 *Imágenes usadas como plantillas del número.*
 
@@ -68,26 +68,26 @@ Con los valores que nos devuelve la función match template localizamos los mín
 
 Por último procedemos a indicar en la imagen original el palo y número detectado de cada <a name="_page4_x72.00_y126.00"></a>carta.
 
-![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.004.png) 
+![](images/Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.004.png) 
 
 **¿Porqué rotar la carta 180 grados?**
 
 La cámara tiene distorsiones radiales que hará que las cosas parezcan más pequeñas a medida que se alejan de su centro de imagen. eso hará que las cartas no parezcan rectángulos perfectos y por tanto un rectángulo comprenderá un poco más que el perímetro de la carta detectado. Se puede apreciar que al rotar la carta 180 grados las comparaciones con nuestra plantilla darán mejores resultados. Una solucion mas facil seria calibrar intrínsecamente la cámara pero carecemos de datos para ello.
 
-![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.006.png)
+![](images/Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.006.png)
 
 ### 3. Análisis de resultados
 <a name="_page5_x72.00_y110.25"></a><a name="_page5_x72.00_y110.25"></a>
 
-![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.007.jpeg)
+![](images/Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.007.jpeg)
 
 Imagen 13 de Test_2
 
-![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.009.jpeg)
+![](images/Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.009.jpeg)
 
 Imagen 2 de Test_2
 
-![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.008.png)**
+![](images/Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.008.png)**
 
 Tabla de resultados
 
