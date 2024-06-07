@@ -28,7 +28,7 @@ El objetivo principal de este proyecto es tomar diferentes imágenes de cartas d
 
 
 
-## Análisisdelalgoritmoempleado.
+## Análisis del algoritmo empleado.
 
 **1. Obtenciónde las imágenes y detección de los contornos de las cartas.**
 
