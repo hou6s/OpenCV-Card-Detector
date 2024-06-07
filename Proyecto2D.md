@@ -22,9 +22,9 @@ El objetivo principal de este proyecto es tomar diferentes imágenes de cartas d
 
 <a name="_page1_x72.00_y342.75"></a>**Índice**
 
-1. [Obtención de las imágenes y detección de los contornos de las cartas. ](#_page2_x72.00_y162.00)
-1. [Detección de palo y número en cada carta. 3 ](#_page3_x72.00_y88.50)
-1. [Análisis de resultados 5](#_page5_x72.00_y110.25)
+1. [Obtención de las imágenes y detección de los contornos de las cartas.](#_page2_x72.00_y162.00)
+1. [Detección de palo y número en cada carta.](#_page3_x72.00_y88.50)
+1. [Análisis de resultados.](#_page5_x72.00_y110.25)
 
 
 
