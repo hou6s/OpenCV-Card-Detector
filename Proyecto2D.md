@@ -11,11 +11,11 @@ MUAII
 UPV 
 
 
-**Visión general**
+### Visión general
 
 El objetivo principal de este proyecto es tomar diferentes imágenes de cartas de poker y <a name="_page1_x72.00_y182.25"></a>diseñar un algoritmo para poder clasificarlas dependiendo del tipo de carta.
 
-**Objetivos**
+### Objetivos
 
 1. Crear un algoritmo de clasificación de cartas mediante OpenCV.
 1. Evaluación de resultados.
@@ -30,7 +30,7 @@ El objetivo principal de este proyecto es tomar diferentes imágenes de cartas d
 
 ## Análisis del algoritmo empleado.
 
-**1. Obtenciónde las imágenes y detección de los contornos de las cartas.**
+### 1. Obtenciónde las imágenes y detección de los contornos de las cartas.
 
    <a name="_page2_x72.00_y162.00"></a><a name="_page2_x72.00_y197.25"></a>Explicación:
 
@@ -44,7 +44,7 @@ Estos contornos serán anexados a una lista con todos los contornos de cartas en
 
 ![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.003.png)
 
-**2. Detección de palo y número en cada carta.**
+### 2. Detección de palo y número en cada carta.
 
 <a name="_page3_x72.00_y88.50"></a><a name="_page3_x72.00_y123.75"></a>Explicación:
 
@@ -68,15 +68,15 @@ Con los valores que nos devuelve la función match template localizamos los mín
 
 Por último procedemos a indicar en la imagen original el palo y número detectado de cada <a name="_page4_x72.00_y126.00"></a>carta.
 
-![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.004.png) \
+![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.004.png) 
 
-¿Porqué rotar la carta 180 grados?
+**¿Porqué rotar la carta 180 grados?**
 
 La cámara tiene distorsiones radiales que hará que las cosas parezcan más pequeñas a medida que se alejan de su centro de imagen. eso hará que las cartas no parezcan rectángulos perfectos y por tanto un rectángulo comprenderá un poco más que el perímetro de la carta detectado. Se puede apreciar que al rotar la carta 180 grados las comparaciones con nuestra plantilla darán mejores resultados. Una solucion mas facil seria calibrar intrínsecamente la cámara pero carecemos de datos para ello.
 
 ![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.006.png)
 
-**3. Análisis de resultados**
+### 3. Análisis de resultados
 
 ![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.007.jpeg)
 
