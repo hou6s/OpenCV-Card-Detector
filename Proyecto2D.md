@@ -4,9 +4,6 @@
 
 04/09/2024
 
-**─**
-
-
 VISIÓN POR COMPUTADOR EN LA INDUSTRIA \
 
 MUAII \
@@ -14,7 +11,7 @@ MUAII \
 UPV \
 
 
-Visión general
+**Visión general**
 
 El objetivo principal de este proyecto es tomar diferentes imágenes de cartas de poker y <a name="_page1_x72.00_y182.25"></a>diseñar un algoritmo para poder clasificarlas dependiendo del tipo de carta.
 
@@ -30,7 +27,8 @@ El objetivo principal de este proyecto es tomar diferentes imágenes de cartas d
 1. [Análisis de resultados 5](#_page5_x72.00_y110.25)
 
 
-<a name="_page2_x72.00_y110.25"></a> ## Análisisdelalgoritmoempleado.
+
+## Análisisdelalgoritmoempleado.
 
 **1. Obtenciónde las imágenes y detección de los contornos de las cartas.**
 
@@ -78,15 +76,19 @@ La cámara tiene distorsiones radiales que hará que las cosas parezcan más peq
 
 ![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.006.png)
 
-**3. Análisis de resultados(Test\_2)**
+**3. Análisis de resultados**
 
 ![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.007.jpeg)
 
+Imagen 13 de Test_2
+
 ![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.009.jpeg)
 
-<a name="_page5_x72.00_y110.25"></a>**Imagen 13 de Test\_2
+Imagen 2 de Test_2
 
 ![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.008.png)**
+
+Tabla de resultados
 
 
 Se consiguieron 102 aciertos de 104 cartas lo cual da una **precisión de 0.981.** La única imagen en la que hubo fallos fue la dos en la que cabe resaltar que las cartas estaban bastante difuminadas.
