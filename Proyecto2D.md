@@ -22,8 +22,8 @@ El objetivo principal de este proyecto es tomar diferentes imágenes de cartas d
 
 <a name="_page1_x72.00_y342.75"></a>**Índice**
 
-1. [Obtención de las imágenes y detección de los contornos de las cartas. 2 ](#_page2_x72.00_y162.00)[Explicación: 2](#_page2_x72.00_y197.25)
-1. [Detección de palo y número en cada carta. 3 ](#_page3_x72.00_y88.50)[Explicación: 3 ](#_page3_x72.00_y123.75)[¿Por qué rotar la carta 180 grados? 4](#_page4_x72.00_y126.00)
+1. [Obtención de las imágenes y detección de los contornos de las cartas. ](#_page2_x72.00_y162.00)
+1. [Detección de palo y número en cada carta. 3 ](#_page3_x72.00_y88.50)
 1. [Análisis de resultados 5](#_page5_x72.00_y110.25)
 
 
@@ -77,6 +77,7 @@ La cámara tiene distorsiones radiales que hará que las cosas parezcan más peq
 ![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.006.png)
 
 ### 3. Análisis de resultados
+<a name="_page5_x72.00_y110.25"></a><a name="_page5_x72.00_y110.25"></a>
 
 ![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.007.jpeg)
 
