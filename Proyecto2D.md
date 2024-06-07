@@ -1,6 +1,6 @@
 ﻿![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.001.jpeg)
 
-**Detecciónde cartas con OpenCV**
+# Detecciónde cartas con OpenCV
 
 04/09/2024
 
@@ -8,6 +8,7 @@
 
 
 VISIÓN POR COMPUTADOR EN LA INDUSTRIA \
+
 MUAII \
 
 UPV \
@@ -24,16 +25,14 @@ El objetivo principal de este proyecto es tomar diferentes imágenes de cartas d
 
 <a name="_page1_x72.00_y342.75"></a>**Índice**
 
-[**Objetivos 1** ](#_page1_x72.00_y182.25)[Índice 1** ](#_page1_x72.00_y342.75)[Análisis del algoritmo empleado. 2**](#_page2_x72.00_y110.25)
-
 1. [Obtención de las imágenes y detección de los contornos de las cartas. 2 ](#_page2_x72.00_y162.00)[Explicación: 2](#_page2_x72.00_y197.25)
 1. [Detección de palo y número en cada carta. 3 ](#_page3_x72.00_y88.50)[Explicación: 3 ](#_page3_x72.00_y123.75)[¿Por qué rotar la carta 180 grados? 4](#_page4_x72.00_y126.00)
 1. [Análisis de resultados 5](#_page5_x72.00_y110.25)
 
 
-<a name="_page2_x72.00_y110.25"></a>**Análisisdelalgoritmoempleado.**
+<a name="_page2_x72.00_y110.25"></a> ## Análisisdelalgoritmoempleado.
 
-1. Obtenciónde las imágenes y detección de los contornos de las cartas.
+**1. Obtenciónde las imágenes y detección de los contornos de las cartas.**
 
    <a name="_page2_x72.00_y162.00"></a><a name="_page2_x72.00_y197.25"></a>Explicación:
 
@@ -47,11 +46,9 @@ Estos contornos serán anexados a una lista con todos los contornos de cartas en
 
 ![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.003.png)
 
-2. Detección de palo y número en cada carta.
+**2. Detección de palo y número en cada carta.**
 
 <a name="_page3_x72.00_y88.50"></a><a name="_page3_x72.00_y123.75"></a>Explicación:
-
-![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.004.png)
 
 Para cada contorno se procede a averiguar cual es el rectángulo de menor área que puede contener ese contorno con cv2.minAreaRect() donde obtendremos los puntos de ese rectángulo.
 
@@ -73,13 +70,15 @@ Con los valores que nos devuelve la función match template localizamos los mín
 
 Por último procedemos a indicar en la imagen original el palo y número detectado de cada <a name="_page4_x72.00_y126.00"></a>carta.
 
-¿Porquérotarlacarta180grados?
+![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.004.png) \
 
-![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.006.png)
+¿Porqué rotar la carta 180 grados?
 
 La cámara tiene distorsiones radiales que hará que las cosas parezcan más pequeñas a medida que se alejan de su centro de imagen. eso hará que las cartas no parezcan rectángulos perfectos y por tanto un rectángulo comprenderá un poco más que el perímetro de la carta detectado. Se puede apreciar que al rotar la carta 180 grados las comparaciones con nuestra plantilla darán mejores resultados. Una solucion mas facil seria calibrar intrínsecamente la cámara pero carecemos de datos para ello.
 
-3. Análisis de resultados(Test\_2)
+![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.006.png)
+
+**3. Análisis de resultados(Test\_2)**
 
 ![](Aspose.Words.780fbf9b-f731-414a-a431-edda19f38538.007.jpeg)
 
